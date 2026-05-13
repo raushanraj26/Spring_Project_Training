@@ -1,0 +1,19 @@
+package com.monocept.Spring.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.monocept.Spring.model.ICoach;
+
+public class DemoController {
+	@Autowired
+private ICoach obj;
+	@GetMapping("/dailyWorkout")
+public String GetDailyWorkoutResult() {
+	return obj.dailyWorkout();
+			
+			
+			
+}
+
+}
