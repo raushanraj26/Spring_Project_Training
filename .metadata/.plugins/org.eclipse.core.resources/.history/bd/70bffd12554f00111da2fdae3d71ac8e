@@ -1,0 +1,11 @@
+package com.monocept.Spring.model;
+
+public class BadmintonCoach implements ICoach {
+
+	@Override
+	public String dailyWorkout() {
+		// TODO Auto-generated method stub
+		return "BadminCoach advised you";
+	}
+
+}

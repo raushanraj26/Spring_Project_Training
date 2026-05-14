@@ -1,0 +1,5 @@
+package com.monocept.Spring.model;
+
+public class FootballCoach {
+
+}

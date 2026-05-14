@@ -1,0 +1,39 @@
+package com.monocept.Spring.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.monocept.Spring.model.ICoach;
+@RestController
+public class DemoController {
+//	through Field injection
+//	@Autowired
+private ICoach obj;  //field injection
+	
+	
+//	through Constructor Injection
+//	@Autowired
+//	public DemoController(ICoach coach) {
+//		this.obj=coach;
+//	}
+
+
+//through setter method injection
+public void setCoach(ICoach coach) {
+	obj=coach;
+}
+	
+	@GetMapping("/dailyWorkout")
+public String GetDailyWorkoutResult() {
+	return obj.dailyWorkout();
+			
+			
+			
+}
+
+public DemoController() {
+	super();
+}
+
+}
